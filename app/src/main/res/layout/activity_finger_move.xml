@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="missingPrefix">
+<!--    <android.xwpeng.teventdispath.view.FingerMoveView
+        android:id="@+id/coustomview_finger_move_view"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#ff0000"
+        />-->
+
+   <!-- <android.xwpeng.teventdispath.view.MyScollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:background="#999fff"
+        android:padding="150dp"
+ >-->
+
+        <android.xwpeng.tviewdesign.view.CircleView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            app:circle_color="@color/blue"
+            app:circle_radius="50dp"
+            android:background="#ff0000"
+            android:padding="10dp"
+            />
+<!--    </android.xwpeng.teventdispath.view.MyScollView>-->
+</LinearLayout>

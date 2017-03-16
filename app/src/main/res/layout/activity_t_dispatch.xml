@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.xwpeng.tviewdesign.view.MyLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/t_dispatch_mylayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="android.xwpeng.tviewdesign.ui.DispatchActivity">
+
+        <android.xwpeng.tviewdesign.view.MyButton
+            android:id="@+id/t_dispatch_mybutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World!" />
+
+</android.xwpeng.tviewdesign.view.MyLayout>
