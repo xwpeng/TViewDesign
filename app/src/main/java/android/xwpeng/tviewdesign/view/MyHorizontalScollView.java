@@ -1,13 +1,11 @@
 package android.xwpeng.tviewdesign.view;
 
 import android.content.Context;
-import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.VelocityTracker;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Scroller;
-import android.xwpeng.tviewdesign.R;
 
 /**
  * Created by xwpeng on 16-12-23.
@@ -245,13 +243,14 @@ public class MyHorizontalScollView extends ViewGroup {
 
         public LayoutParams(Context c, AttributeSet attrs) {
             super(c, attrs);
-
+/*
             TypedArray ta = c.obtainStyledAttributes(attrs,
                     R.styleable.MyHorizontalScollView);
 
             gravity = ta.getInt(R.styleable.MyHorizontalScollView_layout_gravity, -1);
 
-            ta.recycle();
+            ta.recycle();*/
+            // TODO: 17-3-31
         }
 
         public LayoutParams(int width, int height) {

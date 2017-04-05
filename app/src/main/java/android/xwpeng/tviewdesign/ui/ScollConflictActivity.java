@@ -24,9 +24,13 @@ public class ScollConflictActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scoll_conflict);
         mMyScollView = (MyScollView) findViewById(R.id.t_scoll_conflict_myscollview);
-       /* mRecyclerView = (RecyclerView) findViewById(R.id.t_scoll_conflict_recyclerview);
+       /*
+　　　　　//用于纯粹的外部拦截
+        mRecyclerView = (RecyclerView) findViewById(R.id.t_scoll_conflict_recyclerview);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        mRecyclerView.setAdapter(new SimpleAdapter());*/
+        mRecyclerView.setAdapter(new SimpleAdapter());
+        */
+        //内外拦截相互配合
         mMyRecyclerView = (MyRecyclerView) findViewById(R.id.t_scoll_conflict_recyclerview);
         mMyRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mMyRecyclerView.setAdapter(new SimpleAdapter());

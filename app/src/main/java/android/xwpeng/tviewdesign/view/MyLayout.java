@@ -49,6 +49,12 @@ public class MyLayout extends LinearLayout {
             a = true;
         }*/
 //        boolean a = true;
+        switch (ev.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                break;
+            case MotionEvent.ACTION_MOVE:
+                break;
+        }
         Log.d(TAG, "onInterceptTouchEvent " + SystemUtil.getEventName(ev.getAction()) + " return: " + a);
         return a;
     }

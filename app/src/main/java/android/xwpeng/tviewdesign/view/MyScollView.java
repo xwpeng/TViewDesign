@@ -11,8 +11,8 @@ import android.widget.Scroller;
 import android.xwpeng.tviewdesign.R;
 
 /**
+ * 自定义滑动View,仅支持一个子view.用于测试滑动冲突横向滑动
  * Created by xwpeng on 16-12-23.
- * 自定义滑动View,仅支持一个子view
  */
 
 public class MyScollView extends ViewGroup {
@@ -112,20 +112,7 @@ public class MyScollView extends ViewGroup {
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
-/*        // 外部拦截方法一：
-        float rawX = ev.getRawX();
-        float rawY = ev.getRawY();
-        if (ev.getAction() == MotionEvent.ACTION_MOVE) {
-            boolean intercepted = Math.abs(rawX - mRawX) > Math.abs(rawY - mRawY);
-            return intercepted;
-        }
-        mRawX = rawX;
-        mRawY = rawY;
-        mLastX = (int)rawX;
-        mLastY = (int)rawY;
-        return super.onInterceptTouchEvent(ev);*/
-      /*
-       //外部拦截方法二：
+      /* //外部拦截：
        boolean intercepted = false;
         int x = (int) ev.getX();
         int y = (int) ev.getY();
@@ -143,6 +130,7 @@ public class MyScollView extends ViewGroup {
                 intercepted = Math.abs(deltaX) > Math.abs(deltaY);
                 break;
             case MotionEvent.ACTION_UP:
+            　　　//给子View响应点击事件
                 intercepted = false;
                 break;
         }
@@ -151,6 +139,18 @@ public class MyScollView extends ViewGroup {
         mLastXIntercept = x;
         mLastYIntercept = y;
         return intercepted;*/
+        /*        // 外部拦截自己想的尝试RawX是否可行：
+        float rawX = ev.getRawX();
+        float rawY = ev.getRawY();
+        if (ev.getAction() == MotionEvent.ACTION_MOVE) {
+            boolean intercepted = Math.abs(rawX - mRawX) > Math.abs(rawY - mRawY);
+            return intercepted;
+        }
+        mRawX = rawX;
+        mRawY = rawY;
+        mLastX = (int)rawX;
+        mLastY = (int)rawY;
+        return super.onInterceptTouchEvent(ev);*/
         //内部拦截父View需要的代码
         mLastX = (int) ev.getRawX();
         mLastY = (int) ev.getRawY();

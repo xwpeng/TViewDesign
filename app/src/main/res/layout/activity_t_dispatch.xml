@@ -8,8 +8,8 @@
 
         <android.xwpeng.tviewdesign.view.MyButton
             android:id="@+id/t_dispatch_mybutton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="200dp"
             android:text="Hello World!" />
 
 </android.xwpeng.tviewdesign.view.MyLayout>

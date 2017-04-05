@@ -37,20 +37,32 @@ public class MyButton extends Button {
 //        if (0 != event.getAction()) {
 //            a = super.onTouchEvent(event);
 //        }
-        a = super.onTouchEvent(event);
-        Log.d(TAG, "onTouchEvent " + SystemUtil.getEventName(event.getAction()) + " return: " + a);
-        return a;
-    }
+//        a = super.onTouchEvent(event);
+/*        switch (event.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                a = false;
+                break;
+            default:
+                a = true;
+                break;
+        }*/
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_MOVE:
+                a = false;
+                break;
+            default:
+                a = super.onTouchEvent(event);
+                break;
+        }
+            Log.d(TAG, "onTouchEvent " + SystemUtil.getEventName(event.getAction()) + " return: " + a);
+            return a;
+        }
 
     @Override
-    public boolean dispatchTouchEvent(MotionEvent event) {
-        boolean a = false;
-//        if (0 != event.getAction()) {
+    public boolean dispatchTouchEvent(MotionEvent event){
+            boolean a = false;
             a = super.dispatchTouchEvent(event);
-//        }
-        Log.d(TAG, "dispatchTouchEvent " + SystemUtil.getEventName(event.getAction()) + " return: " + a);
-        return a;
-    }
-
-
+            Log.d(TAG, "dispatchTouchEvent " + SystemUtil.getEventName(event.getAction()) + " return: " + a);
+            return a;
+        }
 }
