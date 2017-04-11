@@ -3,6 +3,7 @@ package android.xwpeng.tviewdesign.ui;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Toast;
 import android.xwpeng.tviewdesign.R;
 import android.xwpeng.tviewdesign.view.MyButton;
@@ -24,6 +25,9 @@ public class DispatchActivity extends AppCompatActivity implements View.OnClickL
         mMyLayout.setOnClickListener(this);
         mMyButton = (MyButton) findViewById(R.id.t_dispatch_mybutton);
         mMyButton.setOnClickListener(this);
+        mMyButton.setTag("MyButton1");
+        ViewGroup
+//        mMyLayout.setEnabled(false);
 //        mMyButton.setOnTouchListener(new View.OnTouchListener() {
 //            @Override
 //            public boolean onTouch(View v, MotionEvent event) {

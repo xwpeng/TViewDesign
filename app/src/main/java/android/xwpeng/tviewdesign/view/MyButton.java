@@ -13,7 +13,8 @@ import android.xwpeng.tviewdesign.util.SystemUtil;
  */
 
 public class MyButton extends Button {
-    public static final String TAG = "MyButton";
+
+    public String TAG = "MyButton";
 
     public MyButton(Context context) {
         super(context);
@@ -29,6 +30,10 @@ public class MyButton extends Button {
 
     public MyButton(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
+    }
+
+    public void setTag(String tag) {
+        TAG  = tag;
     }
 
     @Override
