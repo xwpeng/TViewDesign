@@ -3,6 +3,7 @@ package android.xwpeng.tviewdesign.view;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.VelocityTracker;
 import android.view.View;
@@ -112,7 +113,7 @@ public class MyScollView extends ViewGroup {
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
-      /* //外部拦截：
+       //外部拦截：
        boolean intercepted = false;
         int x = (int) ev.getX();
         int y = (int) ev.getY();
@@ -128,9 +129,10 @@ public class MyScollView extends ViewGroup {
                 int deltaX = x - mLastXIntercept;
                 int deltaY = y - mLastYIntercept;
                 intercepted = Math.abs(deltaX) > Math.abs(deltaY);
+                Log.e("xwpeng16", "intercepted : " + intercepted);
                 break;
             case MotionEvent.ACTION_UP:
-            　　　//给子View响应点击事件
+               //给子View响应点击事件
                 intercepted = false;
                 break;
         }
@@ -138,7 +140,7 @@ public class MyScollView extends ViewGroup {
         mLastY = y;
         mLastXIntercept = x;
         mLastYIntercept = y;
-        return intercepted;*/
+        return intercepted;
         /*        // 外部拦截自己想的尝试RawX是否可行：
         float rawX = ev.getRawX();
         float rawY = ev.getRawY();
@@ -152,7 +154,7 @@ public class MyScollView extends ViewGroup {
         mLastY = (int)rawY;
         return super.onInterceptTouchEvent(ev);*/
         //内部拦截父View需要的代码
-        mLastX = (int) ev.getRawX();
+/*        mLastX = (int) ev.getRawX();
         mLastY = (int) ev.getRawY();
         if (MotionEvent.ACTION_DOWN == ev.getAction()) {
             if (!mScroller.isFinished()) {
@@ -162,7 +164,7 @@ public class MyScollView extends ViewGroup {
             return false;
         } else {
             return true;
-        }
+        }*/
     }
 
     @Override
