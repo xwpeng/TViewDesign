@@ -36,7 +36,7 @@
 //
 //    @Override
 //    public boolean onInterceptTouchEvent(MotionEvent ev) {
-//        int intercepted = 0;
+//        boolean intercepted = false;
 //        int x = (int) ev.getX();
 //        int y = (int) ev.getY();
 //        switch (ev.getAction()) {
@@ -45,7 +45,7 @@
 //                mLastYIntercept = y;
 //                mLastX = x;
 //                mLastY = y;
-//                intercepted = 0;
+//                intercepted = false;
 //                break;
 //            case MotionEvent.ACTION_MOVE:
 //                int deltaX = x - mLastXIntercept;

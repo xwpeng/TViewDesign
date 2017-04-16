@@ -8,8 +8,9 @@ import android.widget.ScrollView;
 import android.xwpeng.tviewdesign.R;
 
 /**
+ *  测试View滑动
  * Created by xwpeng on 17-2-20.
- * 测试滑动
+ *
  */
 
 public class ScollActivity extends AppCompatActivity {
@@ -32,7 +33,7 @@ public class ScollActivity extends AppCompatActivity {
     //                mScrollView.setAnimation(animation);
                 //属性动画
 //                ObjectAnimator.ofFloat(mScrollView, "translationX", 0, 100).setDuration(1000).start();
-
+//改变LayoutParams
                 ViewGroup.MarginLayoutParams p = (ViewGroup.MarginLayoutParams) mScrollView.getLayoutParams();
                 p.width += 100;
                 p.leftMargin += 100;

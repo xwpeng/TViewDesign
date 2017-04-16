@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.xwpeng.tviewdesign.ui.FingerMoveActivity;
+import android.xwpeng.tviewdesign.ui.CustomActivity;
 import android.xwpeng.tviewdesign.ui.DispatchActivity;
 import android.xwpeng.tviewdesign.ui.ScollActivity;
 import android.xwpeng.tviewdesign.ui.ScollConflictActivity;
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(MainActivity.this, ScollConflictActivity.class));
                 break;
             case R.id.main_t_custom_view:
-                startActivity(new Intent(MainActivity.this, FingerMoveActivity.class));
+                startActivity(new Intent(MainActivity.this, CustomActivity.class));
                 break;
             case R.id.main_scoll_view:
                 startActivity(new Intent(MainActivity.this, ScollActivity.class));

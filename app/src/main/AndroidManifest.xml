@@ -17,7 +17,7 @@
         </activity>
         <activity android:name="android.xwpeng.tviewdesign.ui.DispatchActivity" />
         <activity android:name="android.xwpeng.tviewdesign.ui.ScollConflictActivity" />
-        <activity android:name="android.xwpeng.tviewdesign.ui.FingerMoveActivity" />
+        <activity android:name="android.xwpeng.tviewdesign.ui.CustomActivity" />
         <activity android:name="android.xwpeng.tviewdesign.ui.ScollActivity" />
     </application>
 

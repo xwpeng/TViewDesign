@@ -3,7 +3,6 @@ package android.xwpeng.tviewdesign.view;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.VelocityTracker;
 import android.view.View;
@@ -129,7 +128,6 @@ public class MyScollView extends ViewGroup {
                 int deltaX = x - mLastXIntercept;
                 int deltaY = y - mLastYIntercept;
                 intercepted = Math.abs(deltaX) > Math.abs(deltaY);
-                Log.e("xwpeng16", "intercepted : " + intercepted);
                 break;
             case MotionEvent.ACTION_UP:
                //给子View响应点击事件

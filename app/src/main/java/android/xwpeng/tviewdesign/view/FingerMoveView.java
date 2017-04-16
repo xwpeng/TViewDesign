@@ -61,7 +61,7 @@ public class FingerMoveView extends View implements GestureDetector.OnGestureLis
                 ViewGroup.MarginLayoutParams p = (ViewGroup.MarginLayoutParams) getLayoutParams();
                 p.leftMargin = p.leftMargin + x - mLastX;
                 p.topMargin = p.topMargin + y - mLastY;
-//                setLayoutParams(p);
+                setLayoutParams(p);
                 requestLayout();
                 break;
         }
